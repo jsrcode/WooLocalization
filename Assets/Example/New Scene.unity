@@ -185,6 +185,14 @@ MonoBehaviour:
         Value: {r: 1, g: 0, b: 0.05529642, a: 1}
       - Key: EN
         Value: {r: 0, g: 0.26829147, b: 1, a: 1}
+      - Key: zh-Hans
+        Value: {r: 1, g: 1, b: 1, a: 1}
+      - Key: zh-TW
+        Value: {r: 1, g: 1, b: 1, a: 1}
+      - Key: en
+        Value: {r: 1, g: 1, b: 1, a: 1}
+      - Key: ja
+        Value: {r: 1, g: 1, b: 1, a: 1}
   material:
     _enable: 0
     _name: 
@@ -207,6 +215,14 @@ MonoBehaviour:
         Value: {fileID: 21300000, guid: 666a83e6f84faa340982aa4a13a2e55c, type: 3}
       - Key: EN
         Value: {fileID: 21300000, guid: 1f49c06b3dfcb8747a2025c8cbb44f67, type: 3}
+      - Key: zh-Hans
+        Value: {fileID: 0}
+      - Key: zh-TW
+        Value: {fileID: 0}
+      - Key: en
+        Value: {fileID: 0}
+      - Key: ja
+        Value: {fileID: 0}
 --- !u!114 &335495487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,14 +236,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.05529642, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 666a83e6f84faa340982aa4a13a2e55c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -324,7 +340,7 @@ GameObject:
   - component: {fileID: 372363573}
   - component: {fileID: 372363576}
   - component: {fileID: 372363575}
-  - component: {fileID: 372363574}
+  - component: {fileID: 372363577}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -352,60 +368,6 @@ RectTransform:
   m_AnchoredPosition: {x: 309, y: 453}
   m_SizeDelta: {x: 448.1595, y: 375.5079}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &372363574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 372363572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46782399ded2e6940b7618d75f33b9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
-  color:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    map:
-      list:
-      - Key: CN
-        Value: {r: 1, g: 0, b: 0.11707878, a: 1}
-      - Key: EN
-        Value: {r: 0, g: 0.23082075, b: 0.7830189, a: 1}
-  material:
-    _enable: 0
-    _name: 
-    _canRemove: 0
-    map:
-      list: []
-    materials:
-      list: []
-  text:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    key: cry
-    formatArgs:
-    - newArg
-  font:
-    _enable: 0
-    _name: 
-    _canRemove: 0
-    map:
-      list: []
-  fontSize:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    map:
-      list:
-      - Key: EN
-        Value: 100
-      - Key: CN
-        Value: 80
 --- !u!114 &372363575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: cry
+  m_text: "\u5DF2\u4E0B\u8F7D:{0}% {1}MB/{2}MB"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -435,8 +397,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280156415
-  m_fontColor: {r: 1, g: 0, b: 0.11707878, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -453,8 +415,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -503,6 +465,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372363572}
   m_CullTransparentMesh: 1
+--- !u!114 &372363577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372363572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46782399ded2e6940b7618d75f33b9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
+  color:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+  material:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+    materials:
+      list: []
+  text:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    key: Load_DOWNLOAD_FORMAT
+    formatArgs: []
+  font:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+  fontSize:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
 --- !u!1 &382205949
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +521,7 @@ GameObject:
   - component: {fileID: 382205950}
   - component: {fileID: 382205953}
   - component: {fileID: 382205952}
-  - component: {fileID: 382205951}
+  - component: {fileID: 382205954}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -542,60 +549,6 @@ RectTransform:
   m_AnchoredPosition: {x: -121, y: 340}
   m_SizeDelta: {x: 318.5807, y: 459.4895}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &382205951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 382205949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22fe7808e7abb948b1fd59db1a8e40a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
-  color:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    map:
-      list:
-      - Key: EN
-        Value: {r: 0, g: 1, b: 0.30387568, a: 1}
-      - Key: CN
-        Value: {r: 1, g: 0.54673, b: 0, a: 1}
-  material:
-    _enable: 0
-    _name: 
-    _canRemove: 0
-    map:
-      list: []
-    materials:
-      list: []
-  text:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    key: smile
-    formatArgs:
-    - '  gaygay'
-  font:
-    _enable: 0
-    _name: 
-    _canRemove: 0
-    map:
-      list: []
-  fontSize:
-    _enable: 1
-    _name: 
-    _canRemove: 0
-    map:
-      list:
-      - Key: EN
-        Value: 100
-      - Key: CN
-        Value: 80
 --- !u!114 &382205952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.54673, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -618,7 +571,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -629,7 +582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Smile  gaygay
+  m_Text: "\u53D1\u73B0\u65B0\u7248\u672C:V{0}\uFF0C\u8BF7\u524D\u5F80\u5E94\u7528\u5E02\u573A/\u5B98\u7F51\u4E0B\u8F7D"
 --- !u!222 &382205953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -638,6 +591,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382205949}
   m_CullTransparentMesh: 1
+--- !u!114 &382205954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382205949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22fe7808e7abb948b1fd59db1a8e40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
+  color:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+  material:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+    materials:
+      list: []
+  text:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    key: Load_UpdateText_4
+    formatArgs: []
+  font:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
+  fontSize:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list: []
 --- !u!1 &721698454
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +765,7 @@ RectTransform:
   - {fileID: 382205950}
   - {fileID: 2030665757}
   - {fileID: 372363573}
+  - {fileID: 1587629839}
   m_Father: {fileID: 1759332439}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -920,6 +919,458 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1587629838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587629839}
+  - component: {fileID: 1587629840}
+  m_Layer: 5
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1587629839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587629838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1472333950}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1587629840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587629838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9804e3d3023ba8742ac770377eb06849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
+  _enum_flag:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 2
+      - Key: zh-TW
+        Value: -1
+      - Key: en
+        Value: 12
+      - Key: ja
+        Value: 2
+  _enum:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 2
+      - Key: zh-TW
+        Value: 1
+      - Key: en
+        Value: 0
+      - Key: ja
+        Value: 3
+  _string:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: asdas
+      - Key: zh-TW
+        Value: dasdas
+      - Key: en
+        Value: fasdf
+      - Key: ja
+        Value: fdsfsd
+  _go:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {fileID: 0}
+      - Key: zh-TW
+        Value: {fileID: 0}
+      - Key: en
+        Value: {fileID: 0}
+      - Key: ja
+        Value: {fileID: 0}
+  _int:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: -18
+      - Key: zh-TW
+        Value: 0
+      - Key: en
+        Value: 0
+      - Key: ja
+        Value: 0
+  _float:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: -0.15
+      - Key: zh-TW
+        Value: 0
+      - Key: en
+        Value: 0
+      - Key: ja
+        Value: 0
+  _bool:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 1
+      - Key: zh-TW
+        Value: 0
+      - Key: en
+        Value: 1
+      - Key: ja
+        Value: 0
+  _double:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 0
+      - Key: zh-TW
+        Value: 0
+      - Key: en
+        Value: 0
+      - Key: ja
+        Value: 0
+  _long:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 0
+      - Key: zh-TW
+        Value: 0
+      - Key: en
+        Value: 0
+      - Key: ja
+        Value: 0
+  _color:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {r: 0.96981126, g: 0.13723731, b: 0.13723731, a: 0}
+      - Key: zh-TW
+        Value: {r: 0.78113204, g: 0.6411178, b: 0.6411178, a: 1}
+      - Key: en
+        Value: {r: 0.2404912, g: 0.63204724, b: 0.9169811, a: 0}
+      - Key: ja
+        Value: {r: 0, g: 1, b: 0.24578094, a: 0}
+  _v3:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {x: 0, y: 0, z: 0}
+      - Key: zh-TW
+        Value: {x: 0, y: 0, z: 0}
+      - Key: en
+        Value: {x: 0, y: 0, z: 0}
+      - Key: ja
+        Value: {x: 0, y: 0, z: 0}
+  _v2:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {x: 0, y: 0}
+      - Key: zh-TW
+        Value: {x: 0, y: 0}
+      - Key: en
+        Value: {x: 0, y: 0}
+      - Key: ja
+        Value: {x: 0, y: 0}
+  _v4:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {x: 0, y: 0, z: 0, w: 0}
+      - Key: zh-TW
+        Value: {x: 0, y: 0, z: 0, w: 0}
+      - Key: en
+        Value: {x: 0, y: 0, z: 0, w: 0}
+      - Key: ja
+        Value: {x: 0, y: 0, z: 0, w: 0}
+  _v2i:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {x: 0, y: 0}
+      - Key: zh-TW
+        Value: {x: 0, y: 0}
+      - Key: en
+        Value: {x: 0, y: 0}
+      - Key: ja
+        Value: {x: 0, y: 0}
+  _v3i:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value: {x: 0, y: 0, z: 0}
+      - Key: zh-TW
+        Value: {x: 0, y: 0, z: 0}
+      - Key: en
+        Value: {x: 0, y: 0, z: 0}
+      - Key: ja
+        Value: {x: 0, y: 0, z: 0}
+  _rect:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: zh-TW
+        Value:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: en
+        Value:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: ja
+        Value:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+  _recti:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value:
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: zh-TW
+        Value:
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: en
+        Value:
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      - Key: ja
+        Value:
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+  _bounds:
+    _enable: 0
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value:
+          m_Center: {x: 0, y: 0, z: 0}
+          m_Extent: {x: 0, y: 0, z: 0}
+      - Key: zh-TW
+        Value:
+          m_Center: {x: 0, y: 0, z: 0}
+          m_Extent: {x: 0, y: 0, z: 0}
+      - Key: en
+        Value:
+          m_Center: {x: 0, y: 0, z: 0}
+          m_Extent: {x: 0, y: 0, z: 0}
+      - Key: ja
+        Value:
+          m_Center: {x: 0, y: 0, z: 0}
+          m_Extent: {x: 0, y: 0, z: 0}
+  _curve:
+    _enable: 1
+    _name: 
+    _canRemove: 0
+    map:
+      list:
+      - Key: zh-Hans
+        Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      - Key: zh-TW
+        Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      - Key: en
+        Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+      - Key: ja
+        Value:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
 --- !u!1 &1759332437
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981cca6b95ac6d547a55a29ba8844528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 382205952}
   data: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
 --- !u!4 &1759332439
 Transform:
@@ -979,6 +1431,7 @@ GameObject:
   - component: {fileID: 2030665758}
   - component: {fileID: 2030665762}
   - component: {fileID: 2030665761}
+  - component: {fileID: 2030665763}
   m_Layer: 5
   m_Name: misc
   m_TagString: Untagged
@@ -1029,6 +1482,14 @@ MonoBehaviour:
         Value: {fileID: 1650236985246834161, guid: 955fa673c5767994abc2684c1d7e1498, type: 3}
       - Key: EN
         Value: {fileID: 1650236985246834161, guid: 1ce153d78190b444c8747ddf3f2ac1a9, type: 3}
+      - Key: zh-Hans
+        Value: {fileID: 0}
+      - Key: zh-TW
+        Value: {fileID: 0}
+      - Key: en
+        Value: {fileID: 0}
+      - Key: ja
+        Value: {fileID: 0}
 --- !u!222 &2030665760
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1060,8 +1521,14 @@ MonoBehaviour:
         Value: {fileID: 21300000, guid: 1f49c06b3dfcb8747a2025c8cbb44f67, type: 3}
       - Key: EN
         Value: {fileID: 21300000, guid: 666a83e6f84faa340982aa4a13a2e55c, type: 3}
-    objects:
-      list: []
+      - Key: zh-Hans
+        Value: {fileID: 0}
+      - Key: zh-TW
+        Value: {fileID: 0}
+      - Key: en
+        Value: {fileID: 0}
+      - Key: ja
+        Value: {fileID: 0}
 --- !u!114 &2030665762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,5 +1552,38 @@ MonoBehaviour:
         Value: {fileID: 1650236985246834161, guid: 955fa673c5767994abc2684c1d7e1498, type: 3}
       - Key: EN
         Value: {fileID: 1650236985246834161, guid: 1ce153d78190b444c8747ddf3f2ac1a9, type: 3}
-    objects:
-      list: []
+      - Key: zh-Hans
+        Value: {fileID: 0}
+      - Key: zh-TW
+        Value: {fileID: 0}
+      - Key: en
+        Value: {fileID: 0}
+      - Key: ja
+        Value: {fileID: 0}
+--- !u!114 &2030665763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030665756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eec510d8455f6b4fa743a8154d174da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 11400000, guid: 0021bbf700fa9af4090b2907de57fd27, type: 2}
+  objects:
+  - _enable: 1
+    _name: eqwe
+    _canRemove: 1
+    map:
+      list:
+      - Key: zh-Hans
+        Value: 
+      - Key: zh-TW
+        Value: 
+      - Key: en
+        Value: 
+      - Key: ja
+        Value: 

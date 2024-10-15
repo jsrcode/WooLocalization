@@ -28,11 +28,29 @@ namespace WooLocalization
             public TMPTextActor(bool enable) : base(enable)
             {
             }
+            protected override void OnAddComponent()
+            {
+                if (string.IsNullOrEmpty(key))
+                {
+
+                    var txt = this.behavior.graphicT.text;
+                    if (!string.IsNullOrEmpty(txt))
+                    {
+                        var contxt = this.behavior.context;
+                        if (contxt != null)
+                        {
+                            var key = contxt.FindKey(Localization.localizationType, txt);
+                            SetKey(key);
+                        }
+                    }
+                }
+            }
+            private static Regex regex = new Regex("^{[0-9]*}$");
             public string GetTargetText(LocalizationBehavior component, out Exception err)
             {
                 err = null;
                 var format = component.GetLocalization(key);
-                if (Regex.Match(format, "^{[0-9]*}$") == null) return format;
+                if (regex.Match(format) == null) return format;
                 try
                 {
                     return string.Format(format, formatArgs);
@@ -74,6 +92,7 @@ namespace WooLocalization
         {
             public TMPFontActor(bool enable) : base(enable)
             {
+                
             }
 
             public override TMP_FontAsset GetDefault()

@@ -13,19 +13,9 @@ using UnityEngine;
 
 namespace WooLocalization
 {
-
     public abstract class LocalizationBehaviorEditor<T> : UnityEditor.Editor where T : LocalizationBehavior
     {
-        [LocalizationActorEditorAttribute]
 
-        class ObjectActorEditor<V> : LocalizationMapActorEditor<LocalizationAssets<V>.ObjectActor, V, LocalizationBehavior> where V : UnityEngine.Object
-        {
-            protected override bool NeedExecute()
-            {
-                return false;
-            }
-            protected override V Draw(string lan, V value) => EditorGUILayout.ObjectField(lan, value, typeof(V), false) as V;
-        }
 
         protected T comp { get; private set; }
         static IEnumerable<Type> GetSubTypesInAssemblies(Type self)
@@ -69,7 +59,7 @@ namespace WooLocalization
                     {
                         var types = field.FieldType.GetGenericArguments();
                         var type0 = types[0];
-                        if (typeof(LocalizationAssets<>.ObjectActor).MakeGenericType(type0) == field.FieldType)
+                        if (typeof(ObjectActor<>).MakeGenericType(type0) == field.FieldType)
                         {
                             if (!insMap_obj.ContainsKey(type0))
                                 insMap_obj.Add(type0, CreateEditor(typeof(ObjectActorEditor<>).MakeGenericType(type0)));
@@ -103,11 +93,11 @@ namespace WooLocalization
                     {
                         var types = FieldType.GetGenericArguments();
                         var type0 = types[0];
-                        if (typeof(LocalizationAssets<>.ObjectActor).MakeGenericType(type0) == FieldType)
+                        if (typeof(ObjectActor<>).MakeGenericType(type0) == FieldType)
                         {
                             if (!insMap_obj.ContainsKey(type0))
                             {
-                                var genericType = typeof(ObjectActorEditor<>).MakeGenericType(new Type[] { typeof(LocalizationBehavior), type0 });
+                                var genericType = typeof(ObjectActorEditor<>).MakeGenericType(new Type[] { type0 });
                                 insMap_obj.Add(type0, CreateEditor(genericType));
                             }
                             var editor = insMap_obj[type0];
