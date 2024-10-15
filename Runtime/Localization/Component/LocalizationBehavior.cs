@@ -5,6 +5,7 @@
  *Date:           2024-04-25
 *********************************************************************************/
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ namespace WooLocalization
     public abstract class LocalizationBehavior : MonoBehaviour, ILocalizationEventActor
     {
         public LocalizationData context;
+
+        public static LocalizationData defaultContext;
         public List<string> GetLocalizationTypes()
         {
             if (context == null)
@@ -57,17 +60,37 @@ namespace WooLocalization
                 var actor = actors[i];
                 actor.SetBehavior(this);
             }
+#if UNITY_EDITOR
+            OnAddComponent();
+#endif
             return actors;
         }
+
+        private void OnAddComponent()
+        {
+            for (int i = 0; i < actors.Count; i++)
+            {
+                var actor = actors[i];
+                actor.OnAddComponent();
+            }
+        }
+
         protected virtual void Awake()
         {
+#if UNITY_EDITOR
+            context = defaultContext;
+#endif
             LoadActors();
         }
-        protected virtual void OnDisable()
+
+
+
+
+        protected  void OnDisable()
         {
             Localization.RemoveHandler(this);
         }
-        protected virtual void OnEnable()
+        protected   void OnEnable()
         {
             Localization.AddHandler(this);
             Execute();

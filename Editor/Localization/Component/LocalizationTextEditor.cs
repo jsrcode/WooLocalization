@@ -4,6 +4,7 @@
  *UnityVersion:   2021.3.33f1c1
  *Date:           2024-04-25
 *********************************************************************************/
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using static WooLocalization.LocalizationText;
@@ -17,12 +18,10 @@ namespace WooLocalization
 
         class TextFontActorEditor : LocalizationMapActorEditor<TextFontActor, Font, LocalizationText>
         {
-            protected override Font Draw(string lan, Font value) => EditorGUILayout.ObjectField(lan, value, typeof(Font), false) as Font;
         }
         [LocalizationActorEditorAttribute]
         class TextFontSizeActorEditor : LocalizationMapActorEditor<TextFontSizeActor, int, LocalizationText>
         {
-            protected override int Draw(string lan, int value) => EditorGUILayout.IntField(lan, value);
         }
         [LocalizationActorEditorAttribute]
         class TextValueActorEditor : LocalizationActorEditor<TextValueActor>
@@ -203,7 +202,10 @@ namespace WooLocalization
                 var format = context.GetTargetText(component, out err);
                 if (err != null)
                     EditorGUILayout.HelpBox(err.Message, MessageType.Error, true);
-                EditorGUILayout.LabelField("Localization", format);
+                var src = component.GetLocalization(context.key);
+                EditorGUILayout.LabelField("Src", src, GUILayout.Height(src.Count(x => x == '\n') * 20 + 20));
+
+                EditorGUILayout.LabelField("Result", format, GUILayout.Height(format.Count(x => x == '\n') * 20 + 20));
 
                 GUILayout.Space(5);
                 GUILayout.EndVertical();
